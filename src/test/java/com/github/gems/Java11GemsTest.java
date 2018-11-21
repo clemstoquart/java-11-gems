@@ -93,7 +93,6 @@ class Java11GemsTest {
     void negatePredicate() {
         // before
         Stream.of("a", "b", "", "c")
-                // statically import `Predicate.not`
                 .filter(s -> !s.isBlank())
                 .forEach(System.out::println);
 
