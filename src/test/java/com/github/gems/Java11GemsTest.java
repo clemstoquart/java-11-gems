@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -70,9 +71,11 @@ class Java11GemsTest {
         Object[] objects = list.toArray();
         String[] strings_0 = list.toArray(new String[0]);
         String[] strings_size = list.toArray(new String[list.size()]);
+        System.out.println(Arrays.toString(strings_size));
 
         // now
         strings_size = list.toArray(String[]::new);
+        System.out.println(Arrays.toString(strings_size));
     }
 
     @Test
